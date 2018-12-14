@@ -1,4 +1,34 @@
-body.landing {
-  background: url("../../assets/portfolio-background.svg") no-repeat top left;
+$dark-color: #611C35;
+$dark-blue: #453F78;
+$light-blue: #4DA1A9;
+$med-grey: #7D7C7A;
+$accent-color: #C9C19F;
+
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  background: $dark-blue;
+  background-repeat:no-repeat;
+  background: -webkit-linear-gradient( to top right, $dark-blue, $light-blue);
+  background: -moz-linear-gradient( to top right, $dark-blue, $light-blue);
+  background: -ms-linear-gradient( to top right, $dark-blue, $light-blue);
+  background: -o-linear-gradient( to top right, $dark-blue, $light-blue);
+  background: linear-gradient( to top right, $dark-blue, $light-blue);
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+}
+
+h2, h3 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: oblique;
+  font-weight: 200;
+}
+
+p, a, span {
+  font-family: 'Nunito Sans', sans-serif;
 }

@@ -1,5 +1,26 @@
-body.landing {
-  background: url("../../assets/portfolio-background.svg") no-repeat top left;
-  background-size: cover; }
+html {
+  height: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: #453F78;
+  background-repeat: no-repeat;
+  background: -webkit-linear-gradient(to top right, #453F78, #4DA1A9);
+  background: -moz-linear-gradient(to top right, #453F78, #4DA1A9);
+  background: -ms-linear-gradient(to top right, #453F78, #4DA1A9);
+  background: -o-linear-gradient(to top right, #453F78, #4DA1A9);
+  background: linear-gradient(to top right, #453F78, #4DA1A9); }
+
+h1 {
+  font-family: 'Merriweather', serif; }
+
+h2, h3 {
+  font-family: 'Libre Franklin', sans-serif;
+  font-style: oblique;
+  font-weight: 200; }
+
+p, a, span {
+  font-family: 'Nunito Sans', sans-serif; }
 
 /*# sourceMappingURL=index.css.map */
