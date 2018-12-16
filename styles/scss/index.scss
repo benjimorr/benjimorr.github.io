@@ -1,8 +1,4 @@
-$dark-color: #611C35;
-$dark-blue: #453F78;
-$light-blue: #4DA1A9;
-$med-grey: #7D7C7A;
-$accent-color: #C9C19F;
+@import 'colors';
 
 html {
   height: 100%;
@@ -10,25 +6,79 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background: $dark-blue;
-  background-repeat:no-repeat;
-  background: -webkit-linear-gradient( to top right, $dark-blue, $light-blue);
-  background: -moz-linear-gradient( to top right, $dark-blue, $light-blue);
-  background: -ms-linear-gradient( to top right, $dark-blue, $light-blue);
-  background: -o-linear-gradient( to top right, $dark-blue, $light-blue);
-  background: linear-gradient( to top right, $dark-blue, $light-blue);
+  background: $drk-blue-dark;
+  background-repeat: no-repeat;
+  background: -webkit-linear-gradient(
+    to top right,
+    $drk-blue-dark,
+    $drk-blue-light
+  );
+  background: -moz-linear-gradient(
+    to top right,
+    $drk-blue-dark,
+    $drk-blue-light
+  );
+  background: -ms-linear-gradient(
+    to top right,
+    $drk-blue-dark,
+    $drk-blue-light
+  );
+  background: -o-linear-gradient(to top right, $drk-blue-dark, $drk-blue-light);
+  background: linear-gradient(to top right, $drk-blue-dark, $drk-blue-light);
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    'header header'
+    'content projects'
+    'footer footer';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr 75px;
 }
 
 h1 {
   font-family: 'Merriweather', serif;
 }
 
-h2, h3 {
+h2,
+h3 {
   font-family: 'Libre Franklin', sans-serif;
   font-style: oblique;
   font-weight: 200;
 }
 
-p, a, span {
+p,
+a,
+span {
   font-family: 'Nunito Sans', sans-serif;
+}
+
+.site-header {
+  grid-area: header;
+
+  .title-wrapper {
+    .site-title {
+      color: $lgt-brown-dark;
+    }
+  }
+}
+
+.main-callout {
+  grid-area: content;
+  height: 100%;
+  width: 1fr;
+  padding: 5rem;
+
+  .about-me {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: $red-md;
+    background-repeat: no-repeat;
+    color: $lgt-brown-md;
+    border-radius: 25px;
+    padding: 1rem 1.5rem;
+  }
 }

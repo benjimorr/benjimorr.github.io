@@ -4,23 +4,53 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background: #453F78;
+  background: #35305C;
   background-repeat: no-repeat;
-  background: -webkit-linear-gradient(to top right, #453F78, #4DA1A9);
-  background: -moz-linear-gradient(to top right, #453F78, #4DA1A9);
-  background: -ms-linear-gradient(to top right, #453F78, #4DA1A9);
-  background: -o-linear-gradient(to top right, #453F78, #4DA1A9);
-  background: linear-gradient(to top right, #453F78, #4DA1A9); }
+  background: -webkit-linear-gradient(to top right, #35305C, #7167C4);
+  background: -moz-linear-gradient(to top right, #35305C, #7167C4);
+  background: -ms-linear-gradient(to top right, #35305C, #7167C4);
+  background: -o-linear-gradient(to top right, #35305C, #7167C4);
+  background: linear-gradient(to top right, #35305C, #7167C4); }
+
+body {
+  display: grid;
+  grid-template-areas: 'header header' 'content projects' 'footer footer';
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 100px 1fr 75px; }
 
 h1 {
   font-family: 'Merriweather', serif; }
 
-h2, h3 {
+h2,
+h3 {
   font-family: 'Libre Franklin', sans-serif;
   font-style: oblique;
   font-weight: 200; }
 
-p, a, span {
+p,
+a,
+span {
   font-family: 'Nunito Sans', sans-serif; }
+
+.site-header {
+  grid-area: header; }
+  .site-header .title-wrapper .site-title {
+    color: #ADA689; }
+
+.main-callout {
+  grid-area: content;
+  height: 100%;
+  width: 1fr;
+  padding: 5rem; }
+  .main-callout .about-me {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: #611C35;
+    background-repeat: no-repeat;
+    color: #C9C19F;
+    border-radius: 25px;
+    padding: 1rem 1.5rem; }
 
 /*# sourceMappingURL=index.css.map */
