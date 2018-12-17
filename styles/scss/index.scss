@@ -2,32 +2,47 @@
 
 html {
   height: 100%;
+}
+
+body {
+  background: $brand-dk-blue;
+  background: -webkit-linear-gradient(
+    to top right,
+    $brand-dk-blue,
+    $brand-lt-blue,
+    $brand-green
+  );
+  background: -moz-linear-gradient(
+    to top right,
+    $brand-dk-blue,
+    $brand-lt-blue,
+    $brand-green
+  );
+  background: -ms-linear-gradient(
+    to top right,
+    $brand-dk-blue,
+    $brand-lt-blue,
+    $brand-green
+  );
+  background: -o-linear-gradient(
+    to top right,
+    $brand-dk-blue,
+    $brand-lt-blue,
+    $brand-green
+  );
+  background: linear-gradient(
+    to top right,
+    $brand-dk-blue,
+    $brand-lt-blue,
+    $brand-green
+  );
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background: $drk-blue-dark;
   background-repeat: no-repeat;
-  background: -webkit-linear-gradient(
-    to top right,
-    $drk-blue-dark,
-    $drk-blue-light
-  );
-  background: -moz-linear-gradient(
-    to top right,
-    $drk-blue-dark,
-    $drk-blue-light
-  );
-  background: -ms-linear-gradient(
-    to top right,
-    $drk-blue-dark,
-    $drk-blue-light
-  );
-  background: -o-linear-gradient(to top right, $drk-blue-dark, $drk-blue-light);
-  background: linear-gradient(to top right, $drk-blue-dark, $drk-blue-light);
-}
+  background-attachment: fixed;
 
-body {
   display: grid;
   grid-template-areas:
     'header header'
@@ -59,7 +74,7 @@ span {
 
   .title-wrapper {
     .site-title {
-      color: $lgt-brown-dark;
+      color: $brand-white;
     }
   }
 }
@@ -68,17 +83,20 @@ span {
   grid-area: content;
   height: 100%;
   width: 1fr;
-  padding: 5rem;
+  padding: 4rem;
 
   .about-me {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background: $red-md;
-    background-repeat: no-repeat;
-    color: $lgt-brown-md;
+    background-color: $brand-md-blue;
     border-radius: 25px;
     padding: 1rem 1.5rem;
+    box-shadow: 3px 3px $brand-lt-blue, -1em 0.5em 0.5em $brand-dk-blue;
+
+    h2 {
+      color: $brand-beige;
+    }
+
+    p {
+      color: $brand-white;
+    }
   }
 }

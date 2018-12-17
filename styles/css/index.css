@@ -1,18 +1,19 @@
 html {
-  height: 100%;
+  height: 100%; }
+
+body {
+  background: #3F7BA6;
+  background: -webkit-linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
+  background: -moz-linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
+  background: -ms-linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
+  background: -o-linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
+  background: linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  background: #35305C;
   background-repeat: no-repeat;
-  background: -webkit-linear-gradient(to top right, #35305C, #7167C4);
-  background: -moz-linear-gradient(to top right, #35305C, #7167C4);
-  background: -ms-linear-gradient(to top right, #35305C, #7167C4);
-  background: -o-linear-gradient(to top right, #35305C, #7167C4);
-  background: linear-gradient(to top right, #35305C, #7167C4); }
-
-body {
+  background-attachment: fixed;
   display: grid;
   grid-template-areas: 'header header' 'content projects' 'footer footer';
   grid-template-columns: 1fr 1fr;
@@ -35,22 +36,21 @@ span {
 .site-header {
   grid-area: header; }
   .site-header .title-wrapper .site-title {
-    color: #ADA689; }
+    color: #CBFBEF; }
 
 .main-callout {
   grid-area: content;
   height: 100%;
   width: 1fr;
-  padding: 5rem; }
+  padding: 4rem; }
   .main-callout .about-me {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    background: #611C35;
-    background-repeat: no-repeat;
-    color: #C9C19F;
+    background-color: #5292B8;
     border-radius: 25px;
-    padding: 1rem 1.5rem; }
+    padding: 1rem 1.5rem;
+    box-shadow: 3px 3px #62A9C4, -1em 0.5em 0.5em #3F7BA6; }
+    .main-callout .about-me h2 {
+      color: #DBFAD3; }
+    .main-callout .about-me p {
+      color: #CBFBEF; }
 
 /*# sourceMappingURL=index.css.map */
