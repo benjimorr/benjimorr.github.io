@@ -33,6 +33,22 @@ a,
 span {
   font-family: 'Nunito Sans', sans-serif; }
 
+.background-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 80%;
+  width: auto;
+  z-index: -1; }
+
+.background-bottom {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  height: 80%;
+  width: auto;
+  z-index: -1; }
+
 .site-header {
   grid-area: header; }
   .site-header .title-wrapper .site-title {
@@ -47,7 +63,7 @@ span {
     background-color: #5292B8;
     border-radius: 25px;
     padding: 1rem 1.5rem;
-    box-shadow: 3px 3px #62A9C4, -1em 0.5em 0.5em #3F7BA6; }
+    box-shadow: 0 0 10px #23445c; }
     .main-callout .about-me h2 {
       color: #DBFAD3; }
     .main-callout .about-me p {
