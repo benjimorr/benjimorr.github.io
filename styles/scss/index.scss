@@ -44,11 +44,12 @@ body {
   background-attachment: fixed;
 
   display: grid;
+  grid-gap: 3rem;
   grid-template-areas:
-    'header header'
-    'content projects'
-    'footer footer';
-  grid-template-columns: 1fr 1fr;
+    'header'
+    'content'
+    'footer';
+  grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 75px;
 }
 
@@ -89,32 +90,63 @@ span {
 
 .site-header {
   grid-area: header;
+  display: grid;
+  grid-template-areas:
+    '. name social';
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
 
   .title-wrapper {
+    grid-area: name;
+
     .site-title {
       color: $brand-white;
+      font-size: 250%;
+      letter-spacing: 0.25rem;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  .social-links {
+    grid-area: social;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        display: inline-block;
+        margin-right: 1rem;
+      }
     }
   }
 }
 
 .main-callout {
   grid-area: content;
-  height: 100%;
-  width: 1fr;
-  padding: 4rem;
+  margin: auto;
+  width: 40%;
 
   .about-me {
     background-color: $brand-md-blue;
     border-radius: 25px;
-    padding: 1rem 1.5rem;
+    padding: 2rem 1.5rem;
     box-shadow: 0 0 10px darken($brand-dk-blue, 20%);
 
     h2 {
       color: $brand-beige;
+      margin-top: 0;
     }
 
     p {
       color: $brand-white;
+    }
+
+    a {
+      color: $brand-green;
     }
   }
 }

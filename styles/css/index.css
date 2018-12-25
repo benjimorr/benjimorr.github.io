@@ -15,8 +15,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: grid;
-  grid-template-areas: 'header header' 'content projects' 'footer footer';
-  grid-template-columns: 1fr 1fr;
+  grid-gap: 3rem;
+  grid-template-areas: 'header' 'content' 'footer';
+  grid-template-columns: 1fr;
   grid-template-rows: 100px 1fr 75px; }
 
 h1 {
@@ -50,23 +51,45 @@ span {
   z-index: -1; }
 
 .site-header {
-  grid-area: header; }
-  .site-header .title-wrapper .site-title {
-    color: #CBFBEF; }
+  grid-area: header;
+  display: grid;
+  grid-template-areas: '. name social';
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center; }
+  .site-header .title-wrapper {
+    grid-area: name; }
+    .site-header .title-wrapper .site-title {
+      color: #CBFBEF;
+      font-size: 250%;
+      letter-spacing: 0.25rem;
+      margin: 0;
+      padding: 0; }
+  .site-header .social-links {
+    grid-area: social; }
+    .site-header .social-links ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      .site-header .social-links ul li {
+        display: inline-block;
+        margin-right: 1rem; }
 
 .main-callout {
   grid-area: content;
-  height: 100%;
-  width: 1fr;
-  padding: 4rem; }
+  margin: auto;
+  width: 40%; }
   .main-callout .about-me {
     background-color: #5292B8;
     border-radius: 25px;
-    padding: 1rem 1.5rem;
+    padding: 2rem 1.5rem;
     box-shadow: 0 0 10px #23445c; }
     .main-callout .about-me h2 {
-      color: #DBFAD3; }
+      color: #DBFAD3;
+      margin-top: 0; }
     .main-callout .about-me p {
       color: #CBFBEF; }
+    .main-callout .about-me a {
+      color: #92DCC6; }
 
 /*# sourceMappingURL=index.css.map */
