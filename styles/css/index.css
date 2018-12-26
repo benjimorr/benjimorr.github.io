@@ -3,11 +3,11 @@ html {
 
 body {
   background: #3F7BA6;
-  background: -webkit-linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
-  background: -moz-linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
-  background: -ms-linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
-  background: -o-linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
-  background: linear-gradient(to top right, #3F7BA6, #62A9C4, #92DCC6);
+  background: -webkit-linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
+  background: -moz-linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
+  background: -ms-linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
+  background: -o-linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
+  background: linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -17,8 +17,9 @@ body {
   display: grid;
   grid-gap: 3rem;
   grid-template-areas: 'header' 'content' 'footer';
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 75px; }
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 1fr 50px;
+  min-height: 100vh; }
 
 h1 {
   font-family: 'Merriweather', serif; }
@@ -54,17 +55,26 @@ span {
   grid-area: header;
   display: grid;
   grid-template-areas: '. name social';
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1.3fr 1fr;
   align-items: center;
   justify-items: center; }
   .site-header .title-wrapper {
-    grid-area: name; }
+    grid-area: name;
+    width: 100%;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid transparent;
+    border-image: -moz-linear-gradient(left, #DBFAD3 0%, #353437 10%, #3F7BA6 50%, #5292B8 75%, rgba(98, 169, 196, 0.1) 100%) 100% 1 stretch;
+    border-image: -webkit-linear-gradient(left, #DBFAD3 0%, #353437 10%, #3F7BA6 50%, #5292B8 75%, rgba(98, 169, 196, 0.1) 100%) 100% 1 stretch;
+    border-image: linear-gradient(90deg, #DBFAD3 0%, #353437 10%, #3F7BA6 50%, #5292B8 75%, rgba(98, 169, 196, 0.1) 100%) 100% 1 stretch; }
     .site-header .title-wrapper .site-title {
       color: #CBFBEF;
       font-size: 250%;
-      letter-spacing: 0.25rem;
+      letter-spacing: 0.2rem;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      text-shadow: 1px 1px 2px #353437; }
   .site-header .social-links {
     grid-area: social; }
     .site-header .social-links ul {
@@ -73,17 +83,21 @@ span {
       padding: 0; }
       .site-header .social-links ul li {
         display: inline-block;
-        margin-right: 1rem; }
+        font-size: 150%;
+        margin-left: 1.5rem; }
+        .site-header .social-links ul li i {
+          color: #353437; }
 
 .main-callout {
-  grid-area: content;
-  margin: auto;
-  width: 40%; }
+  grid-area: content; }
   .main-callout .about-me {
     background-color: #5292B8;
     border-radius: 25px;
-    padding: 2rem 1.5rem;
-    box-shadow: 0 0 10px #23445c; }
+    box-shadow: 0 0 10px #23445c;
+    height: 80%;
+    margin: auto;
+    padding: 2rem;
+    width: 40%; }
     .main-callout .about-me h2 {
       color: #DBFAD3;
       margin-top: 0; }
@@ -91,5 +105,12 @@ span {
       color: #CBFBEF; }
     .main-callout .about-me a {
       color: #92DCC6; }
+
+.site-footer {
+  grid-area: footer;
+  text-align: center; }
+  .site-footer a {
+    color: #CBFBEF;
+    text-decoration: none; }
 
 /*# sourceMappingURL=index.css.map */

@@ -7,31 +7,31 @@ html {
 body {
   background: $brand-dk-blue;
   background: -webkit-linear-gradient(
-    to top right,
+    to bottom right,
     $brand-dk-blue,
     $brand-lt-blue,
     $brand-green
   );
   background: -moz-linear-gradient(
-    to top right,
+    to bottom right,
     $brand-dk-blue,
     $brand-lt-blue,
     $brand-green
   );
   background: -ms-linear-gradient(
-    to top right,
+    to bottom right,
     $brand-dk-blue,
     $brand-lt-blue,
     $brand-green
   );
   background: -o-linear-gradient(
-    to top right,
+    to bottom right,
     $brand-dk-blue,
     $brand-lt-blue,
     $brand-green
   );
   background: linear-gradient(
-    to top right,
+    to bottom right,
     $brand-dk-blue,
     $brand-lt-blue,
     $brand-green
@@ -49,8 +49,9 @@ body {
     'header'
     'content'
     'footer';
-  grid-template-columns: 1fr;
-  grid-template-rows: 100px 1fr 75px;
+  grid-template-columns: 100%;
+  grid-template-rows: 100px 1fr 50px;
+  min-height: 100vh;
 }
 
 h1 {
@@ -91,21 +92,51 @@ span {
 .site-header {
   grid-area: header;
   display: grid;
-  grid-template-areas:
-    '. name social';
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: '. name social';
+  grid-template-columns: 1fr 1.3fr 1fr;
   align-items: center;
   justify-items: center;
 
   .title-wrapper {
     grid-area: name;
+    width: 100%;
+
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid transparent;
+    border-image: -moz-linear-gradient(
+      left,
+      $brand-beige 0%,
+      $brand-black 10%,
+      $brand-dk-blue 50%,
+      $brand-md-blue 75%,
+      transparentize($brand-lt-blue, 0.9) 100%
+    ) 100% 1 stretch;
+    border-image: -webkit-linear-gradient(
+      left,
+      $brand-beige 0%,
+      $brand-black 10%,
+      $brand-dk-blue 50%,
+      $brand-md-blue 75%,
+      transparentize($brand-lt-blue, 0.9) 100%
+    ) 100% 1 stretch;
+    border-image: linear-gradient(
+      90deg,
+      $brand-beige 0%,
+      $brand-black 10%,
+      $brand-dk-blue 50%,
+      $brand-md-blue 75%,
+      transparentize($brand-lt-blue, 0.9) 100%
+    ) 100% 1 stretch;
 
     .site-title {
       color: $brand-white;
       font-size: 250%;
-      letter-spacing: 0.25rem;
+      letter-spacing: 0.2rem;
       margin: 0;
       padding: 0;
+      text-shadow: 1px 1px 2px $brand-black;
     }
   }
 
@@ -119,7 +150,12 @@ span {
 
       li {
         display: inline-block;
-        margin-right: 1rem;
+        font-size: 150%;
+        margin-left: 1.5rem;
+
+        i {
+          color: $brand-black;
+        }
       }
     }
   }
@@ -127,14 +163,15 @@ span {
 
 .main-callout {
   grid-area: content;
-  margin: auto;
-  width: 40%;
 
   .about-me {
     background-color: $brand-md-blue;
     border-radius: 25px;
-    padding: 2rem 1.5rem;
     box-shadow: 0 0 10px darken($brand-dk-blue, 20%);
+    height: 80%;
+    margin: auto;
+    padding: 2rem;
+    width: 40%;
 
     h2 {
       color: $brand-beige;
@@ -148,5 +185,15 @@ span {
     a {
       color: $brand-green;
     }
+  }
+}
+
+.site-footer {
+  grid-area: footer;
+  text-align: center;
+
+  a {
+    color: $brand-white;
+    text-decoration: none;
   }
 }
