@@ -103,7 +103,8 @@ span {
     .main-callout .about-me p {
       color: #CBFBEF; }
     .main-callout .about-me a {
-      color: #92DCC6; }
+      color: #92DCC6;
+      text-decoration-style: wavy; }
 
 .site-footer {
   grid-area: footer;
