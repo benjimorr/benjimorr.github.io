@@ -142,8 +142,10 @@ span {
       text-align: center;
       width: auto; }
 
-  .main-callout .about-me {
-    width: 60%; } }
+  .main-callout {
+    margin-top: 1rem; }
+    .main-callout .about-me {
+      width: 60%; } }
 @media (max-width: 920px) {
   .site-header {
     background-color: rgba(63, 123, 166, 0.8); } }
