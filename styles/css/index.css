@@ -57,7 +57,11 @@ span {
   grid-template-areas: '. name social';
   grid-template-columns: 1fr 1.3fr 1fr;
   align-items: center;
-  justify-items: center; }
+  justify-items: center;
+  position: fixed;
+  z-index: 5;
+  height: 100px;
+  width: 100%; }
   .site-header .title-wrapper {
     grid-area: name;
     width: 100%;
@@ -84,16 +88,25 @@ span {
       .site-header .social-links ul li {
         display: inline-block;
         font-size: 150%;
-        margin-left: 1.5rem; }
+        margin: 0rem 0.75rem; }
         .site-header .social-links ul li i {
           color: #353437; }
 
 .main-callout {
   grid-area: content; }
+  .main-callout .headshot {
+    position: relative;
+    float: right;
+    margin: -4rem -4rem 0 0; }
+    .main-callout .headshot img {
+      border-radius: 50%;
+      box-shadow: 0 0 5px #353437;
+      height: 250px;
+      width: 250px; }
   .main-callout .about-me {
     background-color: #5292B8;
     border-radius: 25px;
-    box-shadow: 0 0 10px #23445c;
+    box-shadow: 0 0 10px #353437;
     margin: auto;
     padding: 2rem;
     width: 40%; }
@@ -108,9 +121,50 @@ span {
 
 .site-footer {
   grid-area: footer;
-  text-align: center; }
+  text-align: center;
+  margin: auto; }
   .site-footer a {
     color: #CBFBEF;
     text-decoration: none; }
+
+/* Media Queries */
+@media (max-width: 1300px) {
+  .background-top, .background-bottom {
+    height: 60%; } }
+@media (max-width: 1110px) {
+  .site-header {
+    grid-template-areas: 'name' 'social';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-gap: 0.5rem;
+    padding: 0.5rem 0; }
+    .site-header .title-wrapper {
+      text-align: center;
+      width: auto; }
+
+  .main-callout .about-me {
+    width: 60%; } }
+@media (max-width: 920px) {
+  .site-header {
+    background-color: rgba(63, 123, 166, 0.8); } }
+@media (max-width: 745px) {
+  .main-callout .headshot {
+    margin: -3.5rem -3.5rem 0 0; }
+    .main-callout .headshot img {
+      height: 175px;
+      width: 175px; }
+  .main-callout .about-me {
+    width: 70%; } }
+@media (max-width: 575px) {
+  body {
+    font-size: 14px; }
+
+  .background-top, .background-bottom {
+    height: 50%; } }
+@media (max-width: 500px) {
+  .main-callout .headshot {
+    margin: -3.5rem 0 1rem 0;
+    float: none;
+    text-align: center; } }
 
 /*# sourceMappingURL=index.css.map */

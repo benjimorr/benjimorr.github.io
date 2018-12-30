@@ -96,6 +96,10 @@ span {
   grid-template-columns: 1fr 1.3fr 1fr;
   align-items: center;
   justify-items: center;
+  position: fixed;
+  z-index: 5;
+  height: 100px;
+  width: 100%;
 
   .title-wrapper {
     grid-area: name;
@@ -151,7 +155,7 @@ span {
       li {
         display: inline-block;
         font-size: 150%;
-        margin-left: 1.5rem;
+        margin: 0rem 0.75rem;
 
         i {
           color: $brand-black;
@@ -164,10 +168,23 @@ span {
 .main-callout {
   grid-area: content;
 
+  .headshot {
+    position: relative;
+    float: right;
+    margin: -4rem -4rem 0 0;
+
+    img {
+      border-radius: 50%;
+      box-shadow: 0 0 5px $brand-black;
+      height: 250px;
+      width: 250px;
+    }
+  }
+
   .about-me {
     background-color: $brand-md-blue;
     border-radius: 25px;
-    box-shadow: 0 0 10px darken($brand-dk-blue, 20%);
+    box-shadow: 0 0 10px $brand-black;
     margin: auto;
     padding: 2rem;
     width: 40%;
@@ -191,9 +208,83 @@ span {
 .site-footer {
   grid-area: footer;
   text-align: center;
+  margin: auto;
 
   a {
     color: $brand-white;
     text-decoration: none;
+  }
+}
+
+/* Media Queries */
+@media (max-width: 1300px) {
+  .background-top, .background-bottom {
+    height: 60%;
+  }
+}
+
+@media (max-width: 1110px) {
+  .site-header {
+    grid-template-areas:
+      'name'
+      'social';
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-gap: 0.5rem;
+    padding: 0.5rem 0;
+
+    .title-wrapper {
+      text-align: center;
+      width: auto;
+    }
+  }
+
+  .main-callout {
+    .about-me {
+      width: 60%;
+    }
+  }
+}
+
+@media (max-width: 920px) {
+  .site-header {
+    background-color: transparentize($brand-dk-blue, 0.2);
+  }
+}
+
+@media (max-width: 745px) {
+  .main-callout {
+    .headshot {
+      margin: -3.5rem -3.5rem 0 0;
+
+      img {
+        height: 175px;
+        width: 175px;
+      }
+    }
+
+    .about-me {
+      width: 70%;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  body {
+    font-size: 14px;
+  }
+
+  .background-top, .background-bottom {
+    height: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .main-callout {
+    .headshot {
+      margin: -3.5rem 0 1rem 0;
+      float: none;
+      text-align: center;
+    }
   }
 }
