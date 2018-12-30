@@ -225,6 +225,7 @@ span {
 
 @media (max-width: 1110px) {
   .site-header {
+    background-color: transparentize($brand-dk-blue, 0.2);
     grid-template-areas:
       'name'
       'social';
@@ -245,12 +246,6 @@ span {
     .about-me {
       width: 60%;
     }
-  }
-}
-
-@media (max-width: 920px) {
-  .site-header {
-    background-color: transparentize($brand-dk-blue, 0.2);
   }
 }
 

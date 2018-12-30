@@ -133,6 +133,7 @@ span {
     height: 60%; } }
 @media (max-width: 1110px) {
   .site-header {
+    background-color: rgba(63, 123, 166, 0.8);
     grid-template-areas: 'name' 'social';
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
@@ -146,9 +147,6 @@ span {
     margin-top: 1rem; }
     .main-callout .about-me {
       width: 60%; } }
-@media (max-width: 920px) {
-  .site-header {
-    background-color: rgba(63, 123, 166, 0.8); } }
 @media (max-width: 745px) {
   .main-callout .headshot {
     margin: -3.5rem -3.5rem 0 0; }
