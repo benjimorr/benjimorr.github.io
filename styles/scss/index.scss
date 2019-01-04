@@ -1,5 +1,26 @@
 @import 'colors';
 
+@font-face {
+  font-family: 'Merriweather';
+  font-style: normal;
+  src: url("../../assets/fonts/Merriweather-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Archivo-Bold';
+  font-style: normal;
+  src: url("../../assets/fonts/Archivo-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  src: url("../../assets/fonts/Roboto-Regular.ttf");
+  font-display: swap;
+}
+
 html {
   height: 100%;
 }
@@ -60,7 +81,7 @@ h1 {
 
 h2,
 h3 {
-  font-family: 'Archivo Bold', sans-serif;
+  font-family: 'Archivo-Bold', sans-serif;
   font-weight: 900;
 }
 
@@ -267,7 +288,7 @@ span {
   }
 }
 
-@media (max-width: 745px) {
+@media (max-width: 815px) {
   .main-callout {
     .headshot {
       margin: -3.5rem -3.5rem 0 0;
