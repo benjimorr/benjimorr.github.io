@@ -50,7 +50,7 @@ body {
     'content'
     'footer';
   grid-template-columns: 100%;
-  grid-template-rows: 100px 1fr 50px;
+  grid-template-rows: 100px 1fr 75px;
   min-height: 100vh;
 }
 
@@ -213,6 +213,11 @@ span {
   a {
     color: $brand-white;
     text-decoration: none;
+  }
+
+  p {
+    color: $brand-white;
+    margin: 0.5rem 0;
   }
 }
 

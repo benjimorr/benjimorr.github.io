@@ -18,7 +18,7 @@ body {
   grid-gap: 3rem;
   grid-template-areas: 'header' 'content' 'footer';
   grid-template-columns: 100%;
-  grid-template-rows: 100px 1fr 50px;
+  grid-template-rows: 100px 1fr 75px;
   min-height: 100vh; }
 
 h1 {
@@ -126,6 +126,9 @@ span {
   .site-footer a {
     color: #CBFBEF;
     text-decoration: none; }
+  .site-footer p {
+    color: #CBFBEF;
+    margin: 0.5rem 0; }
 
 /* ************************************* */
 /* ********** Media Queries ************ */
