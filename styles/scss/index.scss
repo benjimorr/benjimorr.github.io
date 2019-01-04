@@ -8,32 +8,32 @@ body {
   background: $brand-dk-blue;
   background: -webkit-linear-gradient(
     to bottom right,
-    $brand-dk-blue,
-    $brand-lt-blue,
+    $brand-dk-blue-2,
+    $brand-md-blue,
     $brand-green
   );
   background: -moz-linear-gradient(
     to bottom right,
-    $brand-dk-blue,
-    $brand-lt-blue,
+    $brand-dk-blue-2,
+    $brand-md-blue,
     $brand-green
   );
   background: -ms-linear-gradient(
     to bottom right,
-    $brand-dk-blue,
-    $brand-lt-blue,
+    $brand-dk-blue-2,
+    $brand-md-blue,
     $brand-green
   );
   background: -o-linear-gradient(
     to bottom right,
-    $brand-dk-blue,
-    $brand-lt-blue,
+    $brand-dk-blue-2,
+    $brand-md-blue,
     $brand-green
   );
   background: linear-gradient(
     to bottom right,
-    $brand-dk-blue,
-    $brand-lt-blue,
+    $brand-dk-blue-2,
+    $brand-md-blue,
     $brand-green
   );
   -webkit-background-size: cover;
@@ -60,15 +60,14 @@ h1 {
 
 h2,
 h3 {
-  font-family: 'Libre Franklin', sans-serif;
-  font-style: oblique;
-  font-weight: 200;
+  font-family: 'Archivo Bold', sans-serif;
+  font-weight: 900;
 }
 
 p,
 a,
 span {
-  font-family: 'Nunito Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .background-top {
@@ -182,7 +181,7 @@ span {
   }
 
   .about-me {
-    background-color: $brand-md-blue;
+    background-color: $brand-dk-blue-2;
     border-radius: 25px;
     box-shadow: 0 0 10px $brand-black;
     margin: auto;
@@ -191,6 +190,7 @@ span {
 
     h2 {
       color: $brand-beige;
+      text-shadow: 1px 1px 1px $brand-md-blue;
       margin-top: 0;
     }
 
@@ -199,7 +199,7 @@ span {
     }
 
     a {
-      color: $brand-green;
+      color: lighten($brand-green, 10%);
       text-decoration-style: wavy;
     }
   }
@@ -216,7 +216,10 @@ span {
   }
 }
 
-/* Media Queries */
+/* ************************************* */
+/* ********** Media Queries ************ */
+/* ************************************* */
+
 @media (max-width: 1300px) {
   .background-top, .background-bottom {
     height: 60%;
@@ -225,7 +228,7 @@ span {
 
 @media (max-width: 1110px) {
   .site-header {
-    background-color: transparentize($brand-dk-blue, 0.2);
+    background-color: transparentize($brand-dk-blue-2, 0.1);
     grid-template-areas:
       'name'
       'social';
@@ -237,6 +240,16 @@ span {
     .title-wrapper {
       text-align: center;
       width: auto;
+    }
+
+    .social-links {
+      ul {
+        li {
+          i {
+            color: $brand-white;
+          }
+        }
+      }
     }
   }
 

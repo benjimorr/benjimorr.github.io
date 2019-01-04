@@ -3,11 +3,11 @@ html {
 
 body {
   background: #3F7BA6;
-  background: -webkit-linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
-  background: -moz-linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
-  background: -ms-linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
-  background: -o-linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
-  background: linear-gradient(to bottom right, #3F7BA6, #62A9C4, #92DCC6);
+  background: -webkit-linear-gradient(to bottom right, #30556B, #5292B8, #92DCC6);
+  background: -moz-linear-gradient(to bottom right, #30556B, #5292B8, #92DCC6);
+  background: -ms-linear-gradient(to bottom right, #30556B, #5292B8, #92DCC6);
+  background: -o-linear-gradient(to bottom right, #30556B, #5292B8, #92DCC6);
+  background: linear-gradient(to bottom right, #30556B, #5292B8, #92DCC6);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -26,14 +26,13 @@ h1 {
 
 h2,
 h3 {
-  font-family: 'Libre Franklin', sans-serif;
-  font-style: oblique;
-  font-weight: 200; }
+  font-family: 'Archivo Bold', sans-serif;
+  font-weight: 900; }
 
 p,
 a,
 span {
-  font-family: 'Nunito Sans', sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 .background-top {
   position: fixed;
@@ -104,7 +103,7 @@ span {
       height: 250px;
       width: 250px; }
   .main-callout .about-me {
-    background-color: #5292B8;
+    background-color: #30556B;
     border-radius: 25px;
     box-shadow: 0 0 10px #353437;
     margin: auto;
@@ -112,11 +111,12 @@ span {
     width: 40%; }
     .main-callout .about-me h2 {
       color: #DBFAD3;
+      text-shadow: 1px 1px 1px #5292B8;
       margin-top: 0; }
     .main-callout .about-me p {
       color: #CBFBEF; }
     .main-callout .about-me a {
-      color: #92DCC6;
+      color: #b9e8da;
       text-decoration-style: wavy; }
 
 .site-footer {
@@ -127,13 +127,15 @@ span {
     color: #CBFBEF;
     text-decoration: none; }
 
-/* Media Queries */
+/* ************************************* */
+/* ********** Media Queries ************ */
+/* ************************************* */
 @media (max-width: 1300px) {
   .background-top, .background-bottom {
     height: 60%; } }
 @media (max-width: 1110px) {
   .site-header {
-    background-color: rgba(63, 123, 166, 0.8);
+    background-color: rgba(48, 85, 107, 0.9);
     grid-template-areas: 'name' 'social';
     grid-template-columns: 1fr;
     grid-template-rows: 1fr auto;
@@ -142,6 +144,8 @@ span {
     .site-header .title-wrapper {
       text-align: center;
       width: auto; }
+    .site-header .social-links ul li i {
+      color: #CBFBEF; }
 
   .main-callout {
     margin-top: 1rem; }
