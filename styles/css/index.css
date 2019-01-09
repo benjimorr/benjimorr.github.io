@@ -151,6 +151,11 @@ span {
 @media (max-width: 1300px) {
   .background-top, .background-bottom {
     height: 60%; } }
+@media (max-width: 1260px) {
+  .main-callout {
+    margin-top: 1rem; }
+    .main-callout .about-me {
+      width: 60%; } }
 @media (max-width: 1110px) {
   .site-header {
     background-color: rgba(48, 85, 107, 0.9);
@@ -163,12 +168,7 @@ span {
       text-align: center;
       width: auto; }
     .site-header .social-links ul li i {
-      color: #CBFBEF; }
-
-  .main-callout {
-    margin-top: 1rem; }
-    .main-callout .about-me {
-      width: 60%; } }
+      color: #CBFBEF; } }
 @media (max-width: 815px) {
   .main-callout .headshot {
     margin: -3.5rem -3.5rem 0 0; }

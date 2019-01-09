@@ -252,6 +252,16 @@ span {
   }
 }
 
+@media (max-width: 1260px) {
+  .main-callout {
+    margin-top: 1rem;
+
+    .about-me {
+      width: 60%;
+    }
+  }
+}
+
 @media (max-width: 1110px) {
   .site-header {
     background-color: transparentize($brand-dk-blue-2, 0.1);
@@ -276,14 +286,6 @@ span {
           }
         }
       }
-    }
-  }
-
-  .main-callout {
-    margin-top: 1rem;
-
-    .about-me {
-      width: 60%;
     }
   }
 }
