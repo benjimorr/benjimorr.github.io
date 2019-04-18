@@ -116,7 +116,7 @@ span {
   grid-template-columns: 1fr 1.3fr 1fr;
   align-items: center;
   justify-items: center;
-  position: fixed;
+  // position: fixed;
   z-index: 5;
   height: 100px;
   width: 100%;
@@ -187,6 +187,16 @@ span {
 
 .main-callout {
   grid-area: content;
+  display: grid;
+  grid-template-areas:
+    'about'
+    'projects';
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr;
+
+  h2 {
+    color: $brand-beige;
+  }
 
   .headshot {
     position: relative;
@@ -210,7 +220,6 @@ span {
     width: 40%;
 
     h2 {
-      color: $brand-beige;
       text-shadow: 1px 1px 1px $brand-md-blue;
       margin-top: 0;
     }
@@ -222,6 +231,50 @@ span {
     a {
       color: lighten($brand-green, 10%);
       text-decoration-style: wavy;
+    }
+  }
+
+  .projects {
+    h2 {
+      margin: 2rem 0 0;
+      text-align: center;
+      text-shadow: 0 0 15px $brand-black;
+    }
+
+    .project-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      margin: 0 auto;
+      width: 80%;
+
+      .project-item {
+        background-color: $brand-dk-blue-2;
+        border-radius: 25px;
+        box-shadow: 0 0 10px $brand-black;
+        color: $brand-white;
+        margin-top: 3rem;
+        padding: 2rem;
+
+        h3 {
+          margin-top: 0;
+        }
+
+        .project-thumbnail {
+          height: 216px;
+          width: 384px;
+        }
+
+        a {
+          color: $brand-white;
+          text-decoration: none;
+          transition: letter-spacing 0.5s ease;
+
+          &:hover {
+            letter-spacing: 0.25rem;
+          }
+        }
+      }
     }
   }
 }
